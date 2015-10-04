@@ -4,7 +4,7 @@ Description=gunicorn wsgi server
 [Service]
 Type=simple
 WorkingDirectory=/srv/
-ExecStart=/usr/local/bin/gunicorn -c /srv/conf/gunicorn.py app:app
+ExecStart=/usr/local/bin/gunicorn spiders:app -c /srv/conf/gunicorn.py
 User=www-data
 Group=www-data
 
